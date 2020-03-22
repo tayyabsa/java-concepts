@@ -1,4 +1,4 @@
-package com.tayyabsa.diamond.problem;
+package com.tayyabsa.diamondproblem;
 
 public class DiamondProblem implements B,C{
 

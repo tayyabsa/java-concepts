@@ -3,7 +3,8 @@ package com.tayyabsa;
 import com.tayyabsa.abstraction.AbstractionConstants;
 import com.tayyabsa.abstraction.Tiffin;
 import com.tayyabsa.designPatterns.Singleton.Singleton;
-import com.tayyabsa.diamond.problem.DiamondProblem;
+import com.tayyabsa.diamondproblem.DiamondProblem;
+import com.tayyabsa.effectivejavabook.NutritionFacts;
 import com.tayyabsa.inheritance.Abstract;
 import com.tayyabsa.inheritance.Child;
 import com.tayyabsa.inheritance.ChildTwo;
@@ -60,6 +61,9 @@ public class Main {
         System.out.println("Value before the method called :: " + checkPassByValue.getA());
         checkPassByValue.testPassByValueForInstanceVariable();
         System.out.println("Value after the method called :: " + checkPassByValue.getA());
+
+        System.out.println("***********************Builder pattern *********************");
+        NutritionFacts nutritionFacts = new NutritionFacts.Builder(2,2).build();
 
 
     }
