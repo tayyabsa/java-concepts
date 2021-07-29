@@ -1,5 +1,6 @@
 package com.tayyabsa;
 
+
 import com.tayyabsa.abstraction.AbstractionConstants;
 import com.tayyabsa.abstraction.Tiffin;
 import com.tayyabsa.designPatterns.Singleton.Singleton;
@@ -11,10 +12,30 @@ import com.tayyabsa.inheritance.ChildTwo;
 import com.tayyabsa.inheritance.Parent;
 import com.tayyabsa.passbyvalue.A;
 import com.tayyabsa.passbyvalue.CheckPassByValue;
+import com.tayyabsa.testPackage.TestClass;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws CloneNotSupportedException {
+
+        System.out.println("*******************Clone Object creation*************************");
+
+        TestClass testClass = new TestClass();
+        TestClass testClass1 = (TestClass) testClass.clone();
+
+
+        testClass.stringData = 25;
+        testClass1.stringData =25;
+
+        testClass.juiceFactory.a = 25;
+        testClass1.juiceFactory.a = 15;
+
+        System.out.println(testClass.juiceFactory.a);
+        System.out.println(testClass1.juiceFactory.a);
+        System.out.println("     ");
+        System.out.println(testClass1.stringData);
+        System.out.println(testClass1.stringData);
+
 
 
         System.out.println("*******************Inheritance*************************");
@@ -28,7 +49,7 @@ public class Main {
 
         //Abstract in action
         Abstract abs = new ChildTwo();
-
+        abs.abstractClassMethod();
         System.out.println("**************************Interface******************");
 
         Tiffin tifin = new Tiffin();
@@ -63,8 +84,6 @@ public class Main {
         System.out.println("Value after the method called :: " + checkPassByValue.getA());
 
         System.out.println("***********************Builder pattern *********************");
-        NutritionFacts nutritionFacts = new NutritionFacts.Builder(2,2).build();
-
-
+        NutritionFacts nutritionFacts = new NutritionFacts.Builder(2, 2).build();
     }
 }

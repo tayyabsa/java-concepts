@@ -6,8 +6,9 @@ public abstract class Abstract {
     public static String DATA = "data";
 
     public String abstractData = "abstract Data";
+    public static final String abstractData1 = "abstract Data";
 
-    public String stringData;
+    public int stringData;
 
     public abstract void abstractMethod();
 

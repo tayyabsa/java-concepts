@@ -14,6 +14,7 @@ public class Singleton {
         this.b = b;
     }
 
+
     public static Singleton getInstance(){
         if(singleton==null)
             return new Singleton();
